@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+                <block class="Magento\Cms\Block\Block" name="phone" before="-">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">telefono</argument>
+                    </arguments>
+                </block>
+        </referenceContainer>
+
+
+        <move element="customer_form_login" destination="customer.login.container" after="customer.new"/>
+
+        <referenceBlock name="customer.new" template="Magento_Contact::custom.phtml" />
+    </body>
+</page>

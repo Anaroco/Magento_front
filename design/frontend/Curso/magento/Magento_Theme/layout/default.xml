@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script src="js/js-por-layout.js"/>
+    </head>
+    <body>
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceContainer name="footer">
+            <block class="Magento\Theme\Block\Html\Header\Logo" name="logo.footer" before="-">
+                <arguments>
+                    <argument name="logoPathResolver" xsi:type="object">Magento\Theme\ViewModel\Block\Html\Header\LogoPathResolver</argument>
+                    <argument name="logo_size_resolver" xsi:type="object">Magento\Theme\ViewModel\Block\Html\Header\LogoSizeResolver</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="curso.hiberus" after="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">curso-hiberus</argument>
+                </arguments>
+            </block>
+            <block name="go.to.google" after="-" template="Magento_Theme::go-to-google.phtml"/>
+        </referenceContainer>
+
+        <move element="header.panel.wrapper" destination="footer" after="-"/>
+
+        <referenceBlock name="form.subscribe" remove="true" />
+    </body>
+</page>

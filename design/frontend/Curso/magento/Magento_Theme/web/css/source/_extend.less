@@ -1,0 +1,31 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .page-footer {
+        display: none;
+        .lib-change-colors(@color-white, @color-blue-dodger);
+    }
+
+    h1 {
+        font-family: 'Oswald';
+    }
+
+    .panel.wrapper {
+        border-top: 1px solid @color-gray-darken3;
+        display: flex;
+        justify-content: flex-end;
+        background-color: @color-gray-light3;
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .page-footer {
+        display: block;
+    }
+}

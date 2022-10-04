@@ -1,0 +1,29 @@
+<?php
+
+$var = 0;
+
+$arrayExamples = ['pos1', 'pos2'];
+
+?>
+
+<?php if ($var) : ?>
+custom phtml del contact
+<?php else : ?>
+custom phtml no contact
+<?php endif; ?>
+
+<br>
+
+<?php foreach ($arrayExamples as $arrayExample): ?>
+    <?=$arrayExample?>
+<?php endforeach; ?>
+
+
+<br>
+
+<img src="<?= $block->getViewFileUrl('images/magento.png') ?>"/>
+
+<a href="<?= $block->getBaseUrl() ?>"> Go to homepage </a>
+
+
+<a href="<?= $block->getUrl('contact/index/index') ?>"> Go to my section </a>
